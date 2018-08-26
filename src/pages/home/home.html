@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      HOME
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+
+  <ion-item>
+    <ion-label color="primary" floating>Nom</ion-label>
+    <ion-input [(ngModel)]="nom"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label color="primary" floating>Prenom</ion-label>
+      <ion-input [(ngModel)]="prenom"></ion-input>
+  </ion-item>
+  <ion-item>
+        <ion-input type="number" placeholder="Age" [(ngModel)]="age"></ion-input>
+  </ion-item>
+  <button id="presentButton" ion-button full>Se Presenter</button>
+
 </ion-content>

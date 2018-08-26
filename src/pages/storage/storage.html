@@ -1,0 +1,52 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>storage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Title</ion-label>
+      <ion-input  [(ngModel)]="titleMovie" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Rating</ion-label>
+      <ion-input [(ngModel)]="Movierate" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Description</ion-label>
+      <ion-input [(ngModel)]="description" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Categorie</ion-label>
+      <ion-input [(ngModel)]="categorie" type="text"></ion-input>
+    </ion-item>
+
+    <button on-tap="saveMovies()" ion-button full icon-left class = "bouton">
+      <h3><ion-icon name="archive"></ion-icon>Save</h3>
+    </button>
+    <button on-tap="showMovies()" ion-button full icon-left class = "bouton">
+      <h3><ion-icon name="md-eye"></ion-icon></h3>show
+    </button>
+
+  </ion-list>
+
+  <ion-list *ngIf="movies" >
+    <ion-item *ngFor="let item of movies">
+      <ion-label fixed  >{{ item }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>
